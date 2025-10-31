@@ -47,19 +47,19 @@ soundDog.src = "../sound/dog.wav";
 
 //jeg tilføjer event så lyden afspilles ved tryk
 if (getHorseBtn) {
-  getHorseBtn.addEventListener("click"() =>{
-   soundHorse.play();
+  getHorseBtn.addEventListener("click", () => {
+    soundHorse.play();
   });
 }
 
 if (getPolarbearBtn) {
-  getPolarbearBtn.addEventListener("click"() =>{
-   soundPolarbear.play();
+  getPolarbearBtn.addEventListener("click", () => {
+    soundPolarbear.play();
   });
 }
 
 if (getDogBtn) {
-  getDogBtn.addEventListener("click"() =>{
-   soundDog.play();
+  getDogBtn.addEventListener("click", () => {
+    soundDog.play();
   });
 }
