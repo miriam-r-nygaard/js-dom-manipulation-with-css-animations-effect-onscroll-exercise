@@ -42,7 +42,11 @@ const getdogBtn = document.getElementById("dog");
 //Nu begynder lyd filerne, de laver en sti til lyd mappen (sound)
 const soundHorse = new Audio();
 soundHorse.src = "../sound/horse.wav";
+
+const soundPolarbear = new Audio();
 soundPolarbear.src = "../sound/polarbear.wav";
+
+const soundDog = new Audio();
 soundDog.src = "../sound/dog.wav";
 
 //jeg tilføjer event så lyden afspilles ved tryk
