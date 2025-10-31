@@ -22,6 +22,7 @@ window.onscroll = () => {
   });
 };
 
+//her siger browseren fejl
 const sectionOne = document.querySelectorAll(".sec1");
 
 // kun anonyme funktioner kan bruge 'this'
