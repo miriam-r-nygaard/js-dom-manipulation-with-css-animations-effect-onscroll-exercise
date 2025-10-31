@@ -33,3 +33,33 @@ sectionOne.addEventListener("mouseover", function () {
 sectionOne.addEventListener("mouseout", function () {
   this.ClassList.remove("scale");
 });
+
+// nu laver jeg JavaScripten til lydene der skal afspille, når man trykker på knap
+const getHorseBtn = document.getElementById("horse");
+const getPolarbearBtn = document.getElementById("polarbear");
+const getdogBtn = document.getElementById("dog");
+
+//Nu begynder lyd filerne, de laver en sti til lyd mappen (sound)
+const soundHorse = new Audio();
+soundHorse.src = "../sound/horse.wav";
+soundPolarbear.src = "../sound/polarbear.wav";
+soundDog.src = "../sound/dog.wav";
+
+//jeg tilføjer event så lyden afspilles ved tryk
+if (getHorseBtn) {
+  getHorseBtn.addEventListener("click"() =>{
+   soundHorse.play();
+  });
+}
+
+if (getPolarbearBtn) {
+  getPolarbearBtn.addEventListener("click"() =>{
+   soundPolarbear.play();
+  });
+}
+
+if (getDogBtn) {
+  getDogBtn.addEventListener("click"() =>{
+   soundDog.play();
+  });
+}
