@@ -22,8 +22,8 @@ window.onscroll = () => {
   });
 };
 
-//her siger browseren fejl
-const sectionOne = document.querySelectorAll(".sec1");
+//her siger browseren fejl, så jeg har fjernet All i querySelector
+const sectionOne = document.querySelector(".sec1");
 
 // kun anonyme funktioner kan bruge 'this'
 sectionOne.addEventListener("mouseover", function () {
@@ -69,7 +69,7 @@ if (getDogBtn) {
   });
 }
 
-//animation på hunden
+//animation på hunden (virker ikke lige nu)
 const dogElem = document.getElementById("dogElem");
 
 if (dogElem) {
