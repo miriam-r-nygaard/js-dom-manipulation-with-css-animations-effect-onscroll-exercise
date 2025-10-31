@@ -17,7 +17,7 @@ window.onscroll = () => {
       //show-animate er en klasse i css
       sec.classList.add("show-animate");
     } else {
-      sec.ClassList.remove("show-animate");
+      sec.classList.remove("show-animate");
     }
   });
 };
@@ -27,11 +27,11 @@ const sectionOne = document.querySelectorAll(".sec1");
 // kun anonyme funktioner kan bruge 'this'
 sectionOne.addEventListener("mouseover", function () {
   //det er allerede defineret det er en class så behøver ikke . foran
-  this.ClassList.add("scale");
+  this.classList.add("scale");
 });
 
 sectionOne.addEventListener("mouseout", function () {
-  this.ClassList.remove("scale");
+  this.classList.remove("scale");
 });
 
 // nu laver jeg JavaScripten til lydene der skal afspille, når man trykker på knap
@@ -65,5 +65,14 @@ if (getPolarbearBtn) {
 if (getDogBtn) {
   getDogBtn.addEventListener("click", () => {
     soundDog.play();
+  });
+}
+
+//animation på hunden
+const dogElem = document.getElementById("dogElem");
+
+if (dogElem) {
+  dogElem.addEventListener("click", function () {
+    this.classList.toggle("anim-scale");
   });
 }
