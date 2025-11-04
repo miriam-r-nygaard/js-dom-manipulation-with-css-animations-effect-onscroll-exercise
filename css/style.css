@@ -71,6 +71,10 @@ p {
   max-width: 350px;
 }
 
+/* ----------------------------------------------
+   GENERELLE ANIMATIONSTILSTANDE
+---------------------------------------------- */
+
 section .animate {
   opacity: 0;
   filter: blur(5px);
@@ -86,6 +90,10 @@ section.show-animate .animate {
   transform: scale(1.2);
   transition: transform 0.3s ease-in-out;
 }
+
+/* ----------------------------------------------
+   SEKTIONSANIMATIONER (SEC2 - SEC4)
+---------------------------------------------- */
 
 .sec2 .animate {
   transform: translateX(100%);
@@ -111,13 +119,78 @@ section.show-animate .animate {
   transform: rotate(0deg);
 }
 
+/* ----------------------------------------------
+   SEC5 – START- OG SLUTTILSTANDE
+---------------------------------------------- */
+
+/* STARTTILSTAND for sec5 
+   (billederne starter roteret og uden for skærmen) */
 .sec5 .animate {
   transform: translateX(100%) rotate(-90deg);
 }
 
+/* NÅR SEC5 ER SYNLIG (sluttilstand ved scroll)
+   – fjerner rotation + flytter billederne ind */
 .sec5.show-animate .animate {
   transform: translateX(0) rotate(0deg);
 }
+
+/* (VALGFRI) KLIK-ZOOM – eksempel på sluttilstand ved klik
+   – kombinerer alt + scale */
+.sec5.show-animate .animate.anim-scale {
+  transform: translateX(0) rotate(0deg) scale(2);
+}
+
+/* ----------------------------------------------
+   OPGAVEDEL – STUDERENDE SKAL TILFØJE NYE SLUTTILSTANDE
+---------------------------------------------- */
+
+/* TODO: Opgave 2.1
+   Lav en ny sluttilstand .anim-skew, 
+   som kombinerer translateX(0), skew(-20deg) og scale(1.16) */
+/* koden er taget fra anim-scale eksempel*/
+.sec5.show-animate .animate.anim-skew {
+  transform: translateX(0) skew(-20deg) scale(1.16);
+}
+
+/* TODO: Opgave 2.2
+   Lav en ny sluttilstand .anim-rotate, 
+   som kombinerer translateX(0), rotate(210deg) og scale(1.2) */
+/* koden er taget fra anim-scale eksempel*/
+.sec5.show-animate .animate.anim-rotate {
+  transform: translateX(0) rotate(210deg) scale(1.2);
+}
+
+/* OPGAVE 5.2: styling af sec6*/
+.sec6 .animate {
+  transform: translateX(100%) rotate(-90deg);
+}
+
+/* NÅR SEC5 ER SYNLIG (sluttilstand ved scroll)
+   – fjerner rotation + flytter billederne ind */
+.sec6.show-animate .animate {
+  transform: translateX(0) rotate(0deg);
+}
+
+/*valgfri animation*/
+.sec6.show-animate .animate.anim-bounce {
+  transform: translateX(0) scale(1.16);
+  animation: bounce 0.5s ease infinite;
+}
+
+@keyframe bounce {
+  0%,
+  100% {
+    transform: translateX(0) scale(1.16);
+  }
+  50% {
+    transform: translateX(0) scale(1.25);
+  }
+}
+
+/* ----------------------------------------------
+   RESPONSIVE LAYOUTS (valgfrit for styling)
+---------------------------------------------- */
 
 p.animate {
   transition-delay: 0.3s;
